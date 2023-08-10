@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Description</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+    
+
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Project-Analysis</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{url_for('dash')}}">Back</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+<main>
+  <div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Global Data compared with India</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+        </div>
+        <div>
+          <h2>Company Info and Reviews</h2>
+          <p>Contains information about companies with data of their age and employess Reviews</p>
+          <a href="{{url_for('static', filename='Companies_Information.csv')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+        </div>
+        <div>
+          <h2>Global GDP per Capita</h2>
+          <p>gross domestic product; the total value of all the goods and services produced in a country in one year.</p>
+          <a href="{{url_for('static', filename='Global Nations Economy -GDP Per Capita.csv')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+        </div>
+        <div>
+          <h2>Global GNI</h2>
+          <p>Gross national income (GNI) is defined as gross domestic product, plus net receipts from abroad of compensation of employees, property income and net taxes less subsidies on production.</p>
+          <a href="{{url_for('static', filename='Global Nations Economy -GNI.csv')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container px-4 py-5" id="hanging-icons">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+        </div>
+        <div>
+          <h2>Global Inflation</h2>
+          <p>Inflation is the rate of increase in prices over a given period of time. Inflation is typically a broad measure, such as the overall increase in prices or the increase in the cost of living in a country.</p>
+          <a href="{{url_for('static', filename='Global Nations Economy -Inflation.csv')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+        </div>
+        <div>
+          <h2>Income and Expenses</h2>
+          <p>Income refers to the regular payment of money an individual will receive or earn from work or investments. Expenditure refers to the amount of money an individual pays out or spends.</p>
+          <a href="{{url_for('static', filename='Income expenditure demography.csv')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+        </div>
+        <div>
+          <h2>Indian Economy</h2>
+          <p>Contains Economic details about a specific country (india)</p>
+          <a href="{{url_for('static', filename='indianEco.xlsx')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Companies data related with layoff, growth, and Investors
+    </h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+        </div>
+        <div>
+          <h2>Employees Attrition Rate</h2>
+          <a href="{{url_for('static', filename='Employee-attrition.xlsx')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+        </div>
+        <div>
+          <h2>Companies internships offerings</h2>
+          <a href="{{url_for('static', filename='internships.csv')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+        </div>
+        <div>
+          <h2>Companies layoffs</h2>
+          <a href="{{url_for('static', filename='layoffs.csv')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container px-4 py-5" id="hanging-icons">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+        </div>
+        <div>
+          <h2>Gradurates rate and details</h2>
+          <a href="{{url_for('static', filename='No_of_Graduates.csv')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+        </div>
+        <div>
+          <h2>Companies salary providence</h2>
+          <a href="{{url_for('static', filename='Salary_Dataset.csv')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+        </div>
+        <div>
+          <h2>Startup Growth</h2>
+          <a href="{{url_for('static', filename='Startups1.csv')}}" class="btn btn-primary">
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

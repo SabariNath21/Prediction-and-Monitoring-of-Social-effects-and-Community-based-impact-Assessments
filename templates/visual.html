@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Description</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
+    <style>
+      .bd-placeholder-img 
+      {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) 
+      {
+        .bd-placeholder-img-lg 
+        {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Project-Analysis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('dash')}}">Back</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  </header> 
+  </head>
+  <body>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Groceries',     6.93],
+          ['Entertainment',      4.24],
+          ['Housing',  55.2],
+          ['Insurance', 2.64],
+          ['Transportation',    9.32],
+          ['Medical',  2.72],
+          ['Utilities',  10.14],
+          ['Leisure',  8.81]
+        ]);
+
+        var options = {
+          title: 'Average Individual Expenses in India',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'India', 'Global'],
+          ['2015',  1606,      2050],
+          ['2016',  1733,      3863],
+          ['2017',  1981,       4021],
+          ['2018',  1997,      5051]
+        ]);
+
+        var options = {
+          title: 'GDP per Capita($)',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart1'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'India', 'Global'],
+          ['2015',  4.91,      0.12],
+          ['2016',  4.95,      1.26],
+          ['2017',  3.33,       2.13],
+          ['2018',  3.95,      2.44]
+        ]);
+
+        var options = {
+          title: 'Inflation (%)',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'India', 'Global Avg'],
+          ['2015',  1300152392,320738994],
+          ['2016',  1344517250,   333071755],
+          ['2017',  1388676779,   355122128],
+          ['2018',  1402642283,  386838199]
+        ]);
+
+        var options = {
+          title: 'Population',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart3'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Skills", "Demand Value", { role: "style" } ],
+          ["Data analysis", 5, "#8E44AD"],
+["Data quality", 2, "#616A6B"],
+["GCP", 2, "#1ABC9C"],
+["Power BI", 2, "#229954"],
+["Airflow", 2, "#D35400"],
+["Software Engineering", 5, "#7D3C98"],
+["Biology", 2, "#2ECC71"],
+["SQL", 3, "#616A6B"],
+["Data Analytics", 5, "#2ECC71"],
+["AWS", 3, "#8E44AD"],
+["NLP", 3, "#2980B9"],
+["Pandas", 1, "#A569BD"],
+["Consulting", 2, "#E74C3C"],
+["Excel", 5, "#229954"],
+["Computer Vision", 3, "#9B59B6"],
+["Statistics", 2, "#7F8C8D"],
+["Data Mining", 2, "#9B59B6"],
+["R", 2, "#E74C3C"],
+["Machine Learning", 4, "#2874A6"],
+["Industrial", 2, "#34495E"],
+["Python", 4, "#A569BD"],
+["Computer Science", 4, "#1ABC9C"],
+["Economics", 3, "#27AE60"],
+["Azure", 3, "#3498DB"],
+["Mathematics", 3, "#2C3E50"],
+["Architecture", 3, "#D35400"],
+["Big Data", 4, "#3498DB"],
+["Data visualization", 3, "#7F8C8D"],
+["Deep Learning", 6, "#2E86C1"]
+        ]);
+  
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                         { calc: "stringify",
+                           sourceColumn: 1,
+                           type: "string",
+                           role: "annotation" },
+                         2]);
+  
+        var options = {
+          title: "Demand over IT industry",
+          width: 600,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: "none" },
+        };
+        var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+        chart.draw(view, options);
+    }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Year", "No of Starup", { role: "style" } ],
+          [2006, 5, "#00bfff"],
+  [2007, 8, "#ff1493"],
+  [2008, 7, "#7fff00"],
+  [2009, 5, "#ff6347"],
+  [2010, 12, "#dda0dd"],
+  [2011, 22, "#87cefa"],
+  [2012, 25, "#ffa07a"],
+  [2013, 15, "#00ffff"],
+  [2014, 21, "#9370db"],
+  [2015, 63, "#ff8c00"],
+  [2016, 28, "#e6e6fa"],
+  [2017, 29, "#dc143c"],
+  [2018, 18, "#b0c4de"],
+  [2019, 21, "#f4a460"],
+  [2020, 6, "#40e0d0"]
+        ]);
+  
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                         { calc: "stringify",
+                           sourceColumn: 1,
+                           type: "string",
+                           role: "annotation" },
+                         2]);
+  
+        var options = {
+          title: "No of Startup companies started",
+          width: 600,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: "none" },
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values1"));
+        chart.draw(view, options);
+    }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Job", "Salary", { role: "style" } ],
+          ["Healthcare Representative", 131160, "#FF5733"],
+["Research Scientist", 41890, "#C70039"],
+["Sales Executive", 193280, "#FFC300"],
+["Human Resources", 83210, "#900C3F"],
+["Sales Executive", 23420, "#FF5733"],
+["Research Director", 40710, "#C70039"],
+["Sales Executive", 58130, "#FFC300"],
+["Sales Executive", 31430, "#FFC300"],
+["Laboratory Technician", 20440, "#4CAF50"],
+["Laboratory Technician", 134640, "#4CAF50"],
+["Laboratory Technician", 79910, "#4CAF50"],
+["Laboratory Technician", 33770, "#4CAF50"],
+["Sales Executive", 55380, "#FFC300"],
+["Research Scientist", 57620, "#C70039"],
+["Manufacturing Director", 25920, "#7B241C"],
+["Healthcare Representative", 53460, "#FF5733"],
+["Laboratory Technician", 42130, "#4CAF50"],
+["Sales Executive", 41270, "#FFC300"],
+["Sales Representative", 24380, "#FFC300"],
+["Manager", 68700, "#2E86C1"],
+["Laboratory Technician", 104470, "#4CAF50"],
+["Research Scientist", 96670, "#C70039"],
+["Research Scientist", 21480, "#C70039"],
+["Manufacturing Director", 89260, "#7B241C"],
+["Laboratory Technician", 65130, "#4CAF50"]
+        ]);
+  
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                         { calc: "stringify",
+                           sourceColumn: 1,
+                           type: "string",
+                           role: "annotation" },
+                         2]);
+  
+        var options = {
+          title: "Employee attrition as per salary",
+          width: 600,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: "none" },
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values2"));
+        chart.draw(view, options);
+    }
+    </script>
+    <div id="donutchart" style="width: 500px; height: 250px;position: absolute;margin-top: 30px"></div>
+    <div id="curve_chart1" style="width: 430px; height: 250px;position: absolute;margin-left: 400px;margin-top: 30px"></div>
+    <div id="curve_chart2" style="width: 430px; height: 250px;position: absolute;margin-left: 750px;margin-top: 30px"></div>
+    <div id="curve_chart3" style="width: 430px; height: 250px;position: absolute;margin-left: 1080px;margin-top: 30px"></div>
+    <div id="barchart_values" style="width: 100%; height: 250px;position: absolute;margin-top: 270px"></div>
+    <div id="columnchart_values1" style="width: 1000px; height: 300px;position: absolute;margin-left: 430px;margin-top: 270px"></div>
+    <div id="columnchart_values2" style="width: 400px; height: 300px;position: absolute;margin-left: 950px;margin-top: 270px"></div>
+  </body>
+</html>
